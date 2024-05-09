@@ -9,7 +9,10 @@ import "../App.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Box, Typography } from "@mui/material";
-import img from "../assets/Ecommerce.svg";
+import img from "../assets/eCommerce.png";
+import img2 from "../assets/GiftApp.png";
+import img3 from "../assets/BlackJack.png";
+import { Link } from "react-router-dom";
 
 export function Carousel() {
   return (
@@ -27,12 +30,11 @@ export function Carousel() {
         style={{
           display: "flex",
           textAlign: "center",
-          background: "greenyellow",
           justifyContent: "center",
           alignItems: "center",
-          borderRadius: "20px",
           width: "50%",
           minHeight: "400px",
+          color: "white",
         }}
         centeredSlides={true}
         autoplay={{
@@ -45,7 +47,28 @@ export function Carousel() {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}>
         <SwiperSlide>
-          <img src={img} style={{ width: "100px" }} />
+          <Link to={"https://stately-malabi-a7d545.netlify.app"}>
+            <img
+              src={img}
+              style={{ width: "100%", height: "100%", borderRadius: "20px" }}
+            />
+          </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link to={"https://gifexpertaapp.netlify.app"}>
+            <img
+              src={img2}
+              style={{ width: "100%", height: "100%", borderRadius: "20px" }}
+            />
+          </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link to={"https://kaleidoscopic-begonia-67c03b.netlify.app"}>
+            <img
+              src={img3}
+              style={{ width: "100%", height: "100%", borderRadius: "20px" }}
+            />
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
           <Typography>

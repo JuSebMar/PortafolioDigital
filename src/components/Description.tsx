@@ -3,6 +3,7 @@ import ProfilePicture from "../assets/foto-perfil.png";
 
 export const Description = () => {
   const theme = useTheme();
+
   return (
     <Box
       id="about-me"
