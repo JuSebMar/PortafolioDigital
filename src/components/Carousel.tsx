@@ -21,7 +21,7 @@ export function Carousel() {
       sx={{
         alignItems: "center",
         backgroundColor: "black",
-        padding: { xs: "none", sm: 8 },
+        padding: { xs: 2, sm: 10 },
       }}>
       <Swiper
         style={{

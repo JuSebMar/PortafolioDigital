@@ -11,13 +11,14 @@ export const Description = () => {
         sx={{
           display: "flex",
           backgroundColor: theme.palette.primary.main,
+          textAlign: "center",
         }}>
         <Box>
           <Typography
             sx={{
               fontSize: { xs: "10px", sm: "30px" },
               color: "white",
-              padding: "0 20px",
+              padding: "60px 20px",
             }}>
             Front-end Developer, he trabajado con (JavaScript, React, Typescript
             Html, Css ), Además, librerías como Axios, Firebase, librerias de
