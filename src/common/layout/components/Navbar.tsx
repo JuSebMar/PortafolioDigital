@@ -1,36 +1,61 @@
-import { Box, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Drawer,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import ParkIcon from "@mui/icons-material/Park";
 import { SmoothScrollLink } from "../../utils/SmoothScrollLink";
+import { NavListDrawer } from "./NavListDrawer";
+import { useState } from "react";
+
+const navLinks = [
+  { title: "Cónoceme", path: "#about-me" },
+  { title: "Proyectos", path: "#carousel" },
+];
 
 export const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <nav style={{ position: "fixed", top: 0, zIndex: 9999, width: "100%" }}>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: "20px 50px",
-          backgroundColor: "black",
-        }}>
-        <Box>
+    <>
+      <AppBar
+        position="fixed"
+        sx={{ backgroundColor: "black" }}>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <SmoothScrollLink to="#presentacion">
-            <ParkIcon sx={{ color: "white", fontSize: 40 }} />
+            <ParkIcon sx={{ color: "white" }} />
           </SmoothScrollLink>
-        </Box>
-        <Box sx={{ display: "flex", gap: "20px" }}>
-          <SmoothScrollLink to="#about-me">
-            <Typography sx={{ fontSize: 20, color: "#ffffff" }}>
-              CONOCEME
-            </Typography>
-          </SmoothScrollLink>
-
-          <SmoothScrollLink to="#carousel">
-            <Typography sx={{ fontSize: 20, color: "#ffffff" }}>
-              PROYECTOS
-            </Typography>
-          </SmoothScrollLink>
-        </Box>
+          <IconButton
+            color="inherit"
+            size="large"
+            onClick={() => setOpen(true)}
+            sx={{ display: { xs: "block", sm: "none" } }}>
+            <MenuIcon></MenuIcon>
+          </IconButton>
+          <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 2 }}>
+            {navLinks.map((item) => (
+              <SmoothScrollLink to={item.path}>
+                <Typography
+                  key={item.title}
+                  sx={{ flexGrow: 1, fontSize: 20, color: "#ffffff" }}>
+                  {item.title}
+                </Typography>
+              </SmoothScrollLink>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Box>
+        <Drawer
+          open={open}
+          anchor="left"
+          onClose={() => setOpen(false)}>
+          <NavListDrawer />
+        </Drawer>
       </Box>
-    </nav>
+    </>
   );
 };

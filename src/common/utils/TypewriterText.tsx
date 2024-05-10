@@ -7,13 +7,15 @@ interface Text {
 
 const TypewriterText = ({ texts }: Text) => {
   return (
-    <Box component="span" sx={{ display: "inline-block", color: "white" }}>
+    <Box
+      component="span"
+      sx={{ color: "white" }}>
       <Typewriter
         options={{
           strings: texts,
           autoStart: true,
           loop: true,
-          delay: 90,
+          delay: 150,
         }}
       />
     </Box>

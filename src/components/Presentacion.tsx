@@ -4,40 +4,44 @@ import TypewriterText from "../common/utils/TypewriterText";
 
 export const Presentacion = () => {
   return (
-    <Box
-      id="presentacion"
-      sx={{
-        marginTop: "85px",
-        position: "relative",
-        minHeight: "fit-content",
-      }}>
-      <img
-        src={presentacion}
-        alt="portada"
-        style={{
-          maxWidth: "100%",
-        }}
-      />
-
+    <>
       <Box
+        id="presentacion"
         sx={{
-          position: "absolute",
-          top: 200,
-          left: 50,
+          display: "flex",
+          marginTop: { xs: "55px", sm: "65px" },
         }}>
-        <Typography
+        <img
+          src={presentacion}
+          alt="portada"
+          style={{
+            maxWidth: "100%",
+          }}
+        />
+        <Box
           sx={{
-            color: "white",
-            fontSize: "100px",
-            lineHeight: 1,
+            position: "absolute",
+            top: 70,
+            left: 20,
           }}>
-          <TypewriterText texts={["Sebastian <br/> Soto"]} />
-        </Typography>
-        <br />
-        <Typography sx={{ fontSize: "30px", color: "white" }}>
-          Front-End Developer
-        </Typography>
+          <Typography
+            sx={{
+              color: "white",
+              fontSize: { xs: "20px", sm: "100px" },
+              lineHeight: 1,
+            }}>
+            <TypewriterText texts={["Sebastian <br/> Soto"]} />
+          </Typography>
+          <br />
+          <Typography
+            sx={{
+              fontSize: { xs: "10px", sm: "30px" },
+              color: "white",
+            }}>
+            Front-End Developer
+          </Typography>
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 };

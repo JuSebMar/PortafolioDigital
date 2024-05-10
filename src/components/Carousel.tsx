@@ -19,21 +19,15 @@ export function Carousel() {
     <Box
       id="carousel"
       sx={{
-        display: "flex",
-        maxWidth: "100%",
-        minHeight: "500px",
-        justifyContent: "center",
         alignItems: "center",
         backgroundColor: "black",
+        padding: { xs: "none", sm: 8 },
       }}>
       <Swiper
         style={{
           display: "flex",
           textAlign: "center",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "50%",
-          minHeight: "400px",
+          minHeight: "150px",
           color: "white",
         }}
         centeredSlides={true}
@@ -71,13 +65,15 @@ export function Carousel() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Typography>
+          <Typography sx={{ fontSize: { xs: "10px", sm: "30px" } }}>
             Estoy trabajando en nuevos proyectos, por favor mire los que ya hay
             ,sea paciente y ademas...
           </Typography>
         </SwiperSlide>
         <SwiperSlide>
-          <Typography>Contrateme....</Typography>
+          <Typography sx={{ fontSize: { xs: "10px", sm: "30px" } }}>
+            Contrateme....
+          </Typography>
         </SwiperSlide>
       </Swiper>
     </Box>
