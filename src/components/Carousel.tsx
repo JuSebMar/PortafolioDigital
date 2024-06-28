@@ -41,7 +41,7 @@ export function Carousel() {
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}>
         <SwiperSlide>
-          <Link to={"https://stately-malabi-a7d545.netlify.app"}>
+          <Link to={"https://subtle-cat-d25eeb.netlify.app"}>
             <img
               src={img}
               style={{ width: "100%", height: "100%", borderRadius: "20px" }}
