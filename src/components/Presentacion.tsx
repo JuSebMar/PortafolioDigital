@@ -21,7 +21,7 @@ export const Presentacion = () => {
         <Box
           sx={{
             position: "absolute",
-            top: 70,
+            top: 300,
             left: 20,
           }}>
           <Typography
@@ -30,16 +30,16 @@ export const Presentacion = () => {
               fontSize: { xs: "20px", sm: "100px" },
               lineHeight: 1,
             }}>
-            <TypewriterText texts={["Sebastian <br/> Soto"]} />
+            <TypewriterText texts={["Juan Soto", "Front-end <br> Developer"]} />
           </Typography>
           <br />
-          <Typography
+          {/* <Typography
             sx={{
               fontSize: { xs: "10px", sm: "30px" },
               color: "white",
             }}>
             Front-End Developer
-          </Typography>
+          </Typography> */}
         </Box>
       </Box>
     </>

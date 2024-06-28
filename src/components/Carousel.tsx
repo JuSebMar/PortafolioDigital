@@ -8,10 +8,10 @@ import "../App.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import img from "../assets/eCommerce.png";
 import img2 from "../assets/GiftApp.png";
-import img3 from "../assets/BlackJack.png";
+import img3 from "../assets/encriptadorAlura.png";
 import { Link } from "react-router-dom";
 
 export function Carousel() {
@@ -57,23 +57,12 @@ export function Carousel() {
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to={"https://kaleidoscopic-begonia-67c03b.netlify.app"}>
+          <Link to={"https://clever-puppy-016d15.netlify.app"}>
             <img
               src={img3}
               style={{ width: "100%", height: "100%", borderRadius: "20px" }}
             />
           </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Typography sx={{ fontSize: { xs: "10px", sm: "30px" } }}>
-            Estoy trabajando en nuevos proyectos, por favor mire los que ya hay
-            ,sea paciente y ademas...
-          </Typography>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Typography sx={{ fontSize: { xs: "10px", sm: "30px" } }}>
-            Contrateme....
-          </Typography>
         </SwiperSlide>
       </Swiper>
     </Box>

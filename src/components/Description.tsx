@@ -1,4 +1,4 @@
-import { Avatar, Box, CardMedia, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import ProfilePicture from "../assets/foto-perfil.png";
 
 export const Description = () => {
@@ -20,9 +20,9 @@ export const Description = () => {
               color: "white",
               padding: "60px 20px",
             }}>
-            Front-end Developer, he trabajado con (JavaScript, React, Typescript
-            Html, Css ), Además, librerías como Axios, Firebase, librerias de
-            estilos como Material UI, Mantine y Bootstrap.
+            Front-end Developer, he trabajado con (JavaScript, React,
+            Typescript, Html, Css ), Además, librerías como Axios, Firebase,
+            librerias de estilos como Material UI, Mantine, kiwin y Bootstrap.
           </Typography>
         </Box>
         <Box sx={{ display: { xs: "none", sm: "flex" } }}>
