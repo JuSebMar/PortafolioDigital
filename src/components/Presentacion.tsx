@@ -33,13 +33,6 @@ export const Presentacion = () => {
             <TypewriterText texts={["Juan Soto", "Front-end <br> Developer"]} />
           </Typography>
           <br />
-          {/* <Typography
-            sx={{
-              fontSize: { xs: "10px", sm: "30px" },
-              color: "white",
-            }}>
-            Front-End Developer
-          </Typography> */}
         </Box>
       </Box>
     </>
